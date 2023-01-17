@@ -7,8 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/image": "^0.12.1",
@@ -17,6 +16,7 @@
     "astro": "^1.9.0"
   },
   "devDependencies": {
+    "@astrojs/vercel": "^2.4.0",
     "@tailwindcss/typography": "^0.5.9",
     "daisyui": "^2.47.0",
     "sharp": "^0.31.3",
