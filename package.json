@@ -13,13 +13,15 @@
     "@astrojs/image": "^0.12.1",
     "@astrojs/mdx": "^0.14.0",
     "@astrojs/tailwind": "^2.1.3",
-    "astro": "^1.9.0"
+    "astro": "^1.9.2"
   },
   "devDependencies": {
     "@astrojs/vercel": "^2.4.0",
+    "@fontsource/bitter": "^4.5.10",
+    "@fontsource/inter": "^4.5.14",
     "@tailwindcss/typography": "^0.5.9",
     "daisyui": "^2.47.0",
     "sharp": "^0.31.3",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.2.4"
   }
 }
