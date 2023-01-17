@@ -1,0 +1,20 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+}
+import { Image } from '@astrojs/image/components';
+const { src, alt } = Astro.props;
+---
+
+<figure class='text-center'>
+  <Image
+    src={src}
+    alt={alt}
+    aspectRatio={796 / 1100}
+    height={796}
+    class='sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-xl'
+    draggable={false}
+  />
+  <figcaption>{alt}</figcaption>
+</figure>
