@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from '@astrojs/image/components';
+import ChapterList from '@/components/ChapterList.astro';
+---
+
+<Layout title='Alice Abridged'>
+  <header class='hero min-h-screen'>
+    <section class='hero-content flex-col lg:flex-row-reverse'>
+      <article>
+        <hgroup>
+          <h1 class='text-5xl mb-4'>Alice in Wonderland</h1>
+          <h2 class='text-3xl mb-4'>Lewis Carroll</h2>
+        </hgroup>
+        <p>
+          This is an abridged, online version of Alice in Wonderland{' '}
+          <em>(Alice's Adventures in Wonderland)</em> under the{' '}
+          <a
+            href='https://github.com/WordPress/gutenberg/blob/trunk/LICENSE.md'
+            class='link'
+          >
+            Gutenberg licence
+          </a>
+          .
+        </p>
+        <p class='my-6'>
+          The images and text were taken from{' '}
+          <a href='https://www.gutenberg.org/' class='link'>Project Gutenberg</a
+          >{' '}
+          itself.
+        </p>
+        <a href='/chapter/1' class='btn btn-primary'>
+          Start from the beginning
+        </a>
+      </article>
+      <Image
+        src='/image/hero.jpg'
+        alt='Alice in the Room of the Duchess.'
+        class='max-w-sm rounded-lg shadow-2xl'
+        height={1094}
+        aspectRatio={800 / 1094}
+      />
+    </section>
+  </header>
+  <section
+    class='mb-8 prose min-w-[95vw] flex flex-col place-content-center place-items-center'
+  >
+    <h2 class='text-3xl mb-4'>Table of Contents</h2>
+    <ChapterList />
+  </section>
+</Layout>
