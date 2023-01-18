@@ -1088,10 +1088,11 @@ __metadata:
     "@fontsource/bitter": ^4.5.10
     "@fontsource/inter": ^4.5.14
     "@tailwindcss/typography": ^0.5.9
-    astro: 1.9.2
+    astro: ^1.9.2
     daisyui: ^2.47.0
     sharp: ^0.31.3
     tailwindcss: ^3.2.4
+    theme-change: ^2.3.0
   languageName: unknown
   linkType: soft
 
@@ -1221,7 +1222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:1.9.2":
+"astro@npm:^1.9.2":
   version: 1.9.2
   resolution: "astro@npm:1.9.2"
   dependencies:
@@ -5937,6 +5938,13 @@ __metadata:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: 8a278bed123aa9f53549b256a36b719e317c8b96fe86a63406f3c62887f78267cea9b22dc6f7007009738509800d4a4dccc444abd71d762287c90f35b002eb1c
+  languageName: node
+  linkType: hard
+
+"theme-change@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "theme-change@npm:2.3.0"
+  checksum: bf40afd29c55d9c3ca43b2841ea1d6577d0eb48033c45955da31b629e0460685ebedf78bc06ea05526ba2396c95671f9f3d12b4c0a000a31bc2d927971862520
   languageName: node
   linkType: hard
 

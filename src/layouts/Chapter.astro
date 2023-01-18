@@ -10,7 +10,7 @@ export interface Props {
 import Navbar from '@/components/Navbar.astro';
 import Footer from '@/components/Footer.astro';
 const { title, frontmatter } = Astro.props;
-import "@fontsource/bitter"
+import '@fontsource/bitter';
 ---
 
 <!DOCTYPE html>
@@ -21,19 +21,40 @@ import "@fontsource/bitter"
     <link rel='icon' type='image/ico' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
     <title>{frontmatter.title ? frontmatter.title : title}</title>
+    <script is:inline>
+      // ☝️ This script prevent the FART effect.
+      if (localStorage.getItem('theme') === null) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else
+        document.documentElement.setAttribute(
+          'data-theme',
+          localStorage.getItem('theme')
+        );
+      // "theme" LocalStorage value is set by the package to remember user preference.
+      // The value is checked and applyed before rendering anything.
+    </script>
+    <script>
+      import { themeChange } from 'theme-change';
+      themeChange();
+      // 👆 you could import the CDN directly instead of these two lines
+    </script>
   </head>
   <body>
-    <Navbar />
+    <Navbar client:load />
     <article
-      class='flex flex-col place-content-center place-items-center min-w-full sm:prose-sm md:prose-base lg:prose-xl font-serif'
+      class='flex flex-col place-content-center place-items-center min-w-full sm:prose-sm md:prose-base lg:prose-xl'
     >
       <slot />
     </article>
     <Footer chapter={frontmatter.chapter} />
   </body>
   <style is:global>
+    h1 {
+      @apply pt-16;
+    }
+
     p {
-      max-width: 65ch;
+      @apply max-w-prose;
     }
 
     hr {
@@ -43,6 +64,5 @@ import "@fontsource/bitter"
     blockquote {
       @apply border-l-4 border-neutral;
     }
-
   </style>
 </html>

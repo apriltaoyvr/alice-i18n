@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from '@astrojs/image/components';
-import ChapterList from '@/components/ChapterList.astro';
 ---
 
 <Layout title='Alice Abridged'>
@@ -13,12 +12,9 @@ import ChapterList from '@/components/ChapterList.astro';
           <h2 class='text-3xl mb-4'>Lewis Carroll</h2>
         </hgroup>
         <p>
-          This is an abridged, online version of Alice in Wonderland{' '}
+          This is an online, abridged version of Alice in Wonderland{' '}
           <em>(Alice's Adventures in Wonderland)</em> under the{' '}
-          <a
-            href='https://github.com/WordPress/gutenberg/blob/trunk/LICENSE.md'
-            class='link'>Gutenberg licence</a
-          >.
+          <a href='/gutenberg' class='link'>Gutenberg licence</a>.
         </p>
         <p class='my-6'>
           The images and text were taken from{' '}
@@ -26,9 +22,10 @@ import ChapterList from '@/components/ChapterList.astro';
           >{' '}
           itself.
         </p>
-        <a href='/chapter/1' class='btn btn-primary'>
+        <a href='/chapter/1' class='btn btn-primary mr-2'>
           Start from the beginning
         </a>
+        <a href='/chapter' class='btn btn-ghost'> Table of Contents</a>
       </article>
       <Image
         src='/image/hero.jpg'
@@ -39,10 +36,4 @@ import ChapterList from '@/components/ChapterList.astro';
       />
     </section>
   </header>
-  <section
-    class='mb-8 prose min-w-[95vw] flex flex-col place-content-center place-items-center'
-  >
-    <h2 class='text-3xl mb-4'>Table of Contents</h2>
-    <ChapterList />
-  </section>
 </Layout>
