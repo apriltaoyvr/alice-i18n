@@ -2,7 +2,7 @@
 title: Gutenberg
 layout: '@/layouts/Layout.astro'
 ---
-<article class='prose min-w-screen flex flex-col place-content-center py-[5rem]'>
+<article class='prose min-w-screen flex flex-col place-content-center'>
 
 # Gutenberg
 

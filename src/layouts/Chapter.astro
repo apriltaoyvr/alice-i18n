@@ -41,16 +41,18 @@ import '@fontsource/bitter';
   </head>
   <body>
     <Navbar />
-    <article
-      class='flex flex-col place-content-center place-items-center min-w-full sm:prose-sm md:prose-base lg:prose-xl'
-    >
-      <slot />
-    </article>
+    <main class='grid grid-cols-3'>
+      <article
+        class='flex flex-col col-start-2 p-4 min-w-full prose-sm md:prose-base lg:prose-xl'
+      >
+        <slot />
+      </article>
+    </main>
     <Footer chapter={frontmatter.chapter} />
   </body>
   <style is:global>
-    h1 {
-      @apply pt-16;
+    h1, h2 {
+      @apply text-center;
     }
 
     p {
