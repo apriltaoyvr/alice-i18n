@@ -22,7 +22,10 @@ import '@fontsource/bitter';
     <meta name='generator' content={Astro.generator} />
     <title>{frontmatter.title ? frontmatter.title : title}</title>
     <!-- Open Graph Metadata https://ogp.me/ -->
-    <meta property='og:title' content={frontmatter.title ? frontmatter.title : title} />
+    <meta
+      property='og:title'
+      content={frontmatter.title ? frontmatter.title : title}
+    />
     <meta
       property='og:description'
       content={`Chapter ${frontmatter.chapter} of Alice Abridged`}
@@ -56,13 +59,11 @@ import '@fontsource/bitter';
   </head>
   <body>
     <Navbar />
-    <main>
-      <article
-        class='flex flex-col sm:items-center p-4 min-w-full prose-sm md:prose-base lg:prose-xl'
-      >
-        <slot />
-      </article>
-    </main>
+    <article
+      class='flex flex-col sm:items-center p-4 min-w-full prose-sm md:prose-base lg:prose-xl'
+    >
+      <slot />
+    </article>
     <Footer chapter={frontmatter.chapter} />
   </body>
   <style is:global>
