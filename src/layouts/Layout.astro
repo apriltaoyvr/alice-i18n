@@ -19,7 +19,11 @@ import '@fontsource/inter';
     <script is:inline>
       // ☝️ This script prevent the FART effect.
       if (localStorage.getItem('theme') === null) {
-        document.documentElement.setAttribute('data-theme', 'light');
+        let preference = window.matchMedia('(prefers-color-scheme: dark)');
+        document.documentElement.setAttribute(
+          'data-theme',
+          preference ? 'dark' : 'light'
+        );
       } else
         document.documentElement.setAttribute(
           'data-theme',
