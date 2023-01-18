@@ -1,6 +1,6 @@
 ---
 title: Gutenberg
-layout: '@/layouts/Layout.astro'
+layout: '@/layouts/Chapter.astro'
 ---
 <article class='prose min-w-screen flex flex-col place-content-center'>
 
