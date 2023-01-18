@@ -1,9 +1,12 @@
 ---
 export interface Props {
-  title: string;
+  title?: string;
+  frontmatter?: {
+    title: string;
+  }
 }
 
-const { title } = Astro.props;
+const { title, frontmatter } = Astro.props;
 import Navbar from '@/components/Navbar.astro';
 import '@fontsource/inter';
 ---
@@ -15,9 +18,9 @@ import '@fontsource/inter';
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/ico' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
+    <title>{frontmatter ? frontmatter.title : title}</title>
     <!-- Open Graph Metadata https://ogp.me/ -->
-    <meta property="og:title" content="Alice Abridged" />
+    <meta property="og:title" content={frontmatter ? frontmatter.title : title} />
     <meta property="og:description" content="An online, abridged version of Alice in Wonderland" />
     <meta property="og:image" content="https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg" />
     <meta property="og:image:alt" content="Alice in the Room of the Duchess" />
