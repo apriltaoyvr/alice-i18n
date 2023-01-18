@@ -7,8 +7,10 @@ interface Post {
   };
 }
 
-const posts: Post[] = await Astro.glob('./*.mdx');
-
+const data: Post[] = await Astro.glob('./*.mdx');
+const posts = data.sort((a, b) => {
+  return a.frontmatter.chapter - b.frontmatter.chapter;
+});
 import Layout from '@/layouts/Layout.astro';
 ---
 
