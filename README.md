@@ -1,50 +1,16 @@
-# Welcome to [Astro](https://astro.build)
+# Alice Abridged
+An online, abridged version of Alice in Wonderland. The text and images are taken from [Project Gutenberg](https://onlinebooks.library.upenn.edu/webbin/gutbook/lookup?num=19033). 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+This is a simple practice project to test out Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Please note that the legality of Gutenberg depends on your country. If you are in a country where Project Gutenberg's library is not legal, continue at your own risk.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Screenshots
+![image](https://user-images.githubusercontent.com/95392008/213047956-2dc16489-8be1-4259-ad06-984c19c5d18d.png)
+![image](https://user-images.githubusercontent.com/95392008/213048100-69f3c315-7e15-427f-ab0c-141fe175f8fc.png)
+![image](https://user-images.githubusercontent.com/95392008/213048219-50b5ff14-68a9-461b-affd-17efe65e9465.png)
 
+## Created with
+- Astro
+- TailwindCSS (DaisyUI)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
