@@ -1,0 +1,51 @@
+---
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+
+changeLanguage("fi");
+---
+
+<Layout title={t('title')}>
+  <header class='hero min-h-[90vh]'>
+    <section class='hero-content flex-col lg:flex-row-reverse'>
+      <article>
+        <hgroup>
+          <h1 class='text-5xl mb-4'>{t('title')}</h1>
+          <h2 class='text-3xl mb-4'>Lewis Carroll</h2>
+        </hgroup>
+        <article class='mb-6'>
+          <p>
+            <Trans i18nKey='home.desc'>
+              This is an online, abridged version of Alice in Wonderland under
+              the
+              <a href='/gutenberg' class='link'>Gutenberg licence</a>.
+            </Trans>
+          </p>
+          <p>
+            <Trans i18nKey='home.credit'>
+              The images and text were taken from
+              <a href='https://www.gutenberg.org/' class='link'
+                >Project Gutenberg</a
+              >
+              itself.
+            </Trans>
+          </p>
+        </article>
+        <a href={localizePath("/chapter") + '/1'} class='btn btn-primary mr-2'>
+          {t('home.start')}
+        </a>
+        <a href={localizePath("/chapter")} class='btn btn-ghost'>{t('utility.toc')}</a>
+      </article>
+      <Image
+        src='/image/hero.jpg'
+        alt='Alice in the Room of the Duchess.'
+        class='max-w-sm rounded-lg shadow-2xl'
+        height={1094}
+        aspectRatio={800 / 1094}
+      />
+    </section>
+  </header>
+</Layout>
