@@ -2,9 +2,9 @@
 import { changeLanguage, t } from "i18next";
 import Layout from "@/layouts/Layout.astro";
 
-changeLanguage("de");
+changeLanguage("fi");
 
-const chapters = await Astro.glob("./chapter/*.mdx");
+const chapters = await Astro.glob("./*.mdx");
 chapters.sort((a, b) => {
     return a.frontmatter.chapter - b.frontmatter.chapter;
 });

@@ -1,11 +1,11 @@
 ---
-import { t, changeLanguage } from 'i18next';
-import { Trans } from 'astro-i18next/components';
-import { localizePath } from 'astro-i18next';
-import Layout from '../layouts/Layout.astro';
-import { Image } from '@astrojs/image/components';
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
 
-changeLanguage('en');
+changeLanguage("en");
 ---
 
 <Layout title={t('title')}>
@@ -35,7 +35,7 @@ changeLanguage('en');
           </p>
         </article>
         <aside class="flex flex-row place-items-center">
-          <a href={localizePath('/chapter') + '/1'} class='btn btn-primary mr-2'>
+          <a href={localizePath('/chapter/1')} class='btn btn-primary mr-2'>
             {t('home.start')}
           </a>
           <a href={localizePath('/chapter')} class='btn btn-ghost'
