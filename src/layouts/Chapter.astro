@@ -77,19 +77,19 @@ const imageAlt = 'Alice in the Room of the Duchess';
     </script>
     <!-- Scrollbar -->
     <script is:inline>
-      let prevScrollpos = window.pageYOffset;
       window.onscroll = () => {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '0';
-        } else {
-          document.getElementById('navbar').style.top = '-5rem';
-        }
-        prevScrollpos = currentScrollPos;
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').value = scrolled;
       };
     </script>
   </head>
   <body>
+    <progress id='progress-bar' class='fixed z-20 progress rounded-none opacity-75' value='0' max='100' />
     <Navbar />
     <article
       class='flex flex-col sm:items-center p-4 min-w-full prose-sm md:prose-base lg:prose-xl'

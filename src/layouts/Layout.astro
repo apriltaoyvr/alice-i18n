@@ -76,19 +76,6 @@ const imageAlt = 'Alice in the Room of the Duchess';
       themeChange();
       // 👆 you could import the CDN directly instead of these two lines
     </script>
-    <!-- Scrollbar -->
-    <script is:inline>
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = () => {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById('navbar').style.top = '0';
-        } else {
-          document.getElementById('navbar').style.top = '-5rem';
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    </script>
   </head>
   <body class='flex flex-col place-content-center place-items-center'>
     <Navbar />
