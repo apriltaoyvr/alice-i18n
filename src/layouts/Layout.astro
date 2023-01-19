@@ -1,6 +1,7 @@
 ---
-import i18next, { t } from 'i18next';
-import { Trans, HeadHrefLangs } from 'astro-i18next/components';
+import i18next from 'i18next';
+import { SEO } from 'astro-seo';
+import { HeadHrefLangs } from 'astro-i18next/components';
 
 export interface Props {
   title?: string;
@@ -17,29 +18,40 @@ import '@fontsource/inter';
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
-    <meta charset='UTF-8' />
+    <!-- Meta Tags -->
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/ico' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <title>{frontmatter ? frontmatter.title : title}</title>
+    <SEO
+      charset='UTF-8'
+      title={frontmatter.title ? frontmatter.title : title}
+      description={`Alice internationalized. An online, free to read version of Alice in Wonderland in multiple languages. All texts and images taken from Project Gutenberg.`}
+      openGraph={{
+        basic: {
+          title: frontmatter.title ? frontmatter.title : title,
+          type: 'website',
+          image:
+            'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
+        },
+        image: {
+          url: 'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
+          alt: 'Alice in the Room of the Duchess',
+          type: 'jpg',
+          width: 576,
+          height: 796,
+        },
+      }}
+      twitter={{
+        title: 'Alice i18n',
+        description: 'An internationalized Alice',
+        image:
+          'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
+        imageAlt: 'Alice in the Room of the Duchess',
+      }}
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.ico' }],
+      }}
+    />
     <HeadHrefLangs />
-    <!-- Open Graph Metadata https://ogp.me/ -->
-    <meta
-      property='og:title'
-      content={frontmatter ? frontmatter.title : title}
-    />
-    <meta
-      property='og:description'
-      content='An online, abridged version of Alice in Wonderland'
-    />
-    <meta
-      property='og:image'
-      content='https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg'
-    />
-    <meta property='og:image:alt' content='Alice in the Room of the Duchess' />
-    <meta property='og:image:type' content='image/jpeg' />
-    <meta property='og:image:width' content='576' />
-    <meta property='og:image:height' content='796' />
     <!-- Theme Scripts -->
     <script is:inline>
       // ☝️ This script prevent the FART effect.

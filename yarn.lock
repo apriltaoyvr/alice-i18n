@@ -1036,6 +1036,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.9
     astro: ^1.9.2
     astro-i18next: ^1.0.0-beta.15
+    astro-seo: ^0.7.0
     daisyui: ^2.47.0
     sharp: ^0.31.3
     tailwindcss: ^3.2.4
@@ -1176,6 +1177,13 @@ __metadata:
   bin:
     astro-i18next: dist/cli/index.js
   checksum: 6bb87c20953c35f6b255bc85246a798376eba14131aa189c483a30cd13a21c6d426c875fe80af8a440e14c0ef60a3f825da34b003993b607c331cc779d35188d
+  languageName: node
+  linkType: hard
+
+"astro-seo@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "astro-seo@npm:0.7.0"
+  checksum: 1f63fdeb7ed862e55a4575364ca332e435f06ee419b8537c28c91209fb964767fe16ca88810cf3c228bed9a03a5f3b0672ed484ebc04644326307559380c3861
   languageName: node
   linkType: hard
 

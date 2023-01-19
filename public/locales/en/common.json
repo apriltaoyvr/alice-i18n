@@ -8,5 +8,9 @@
   "utility": {
     "chapter": "Chapter",
     "toc": "Table of Contents"
+  },
+  "meta": {
+   "desc": "An internationalized Alice",
+   "descfull": "Chapter {{chapter}}, {{title}} of Alice in Wonderland. Online and free to read. All texts and images taken from Project Gutenberg."
   }
 }

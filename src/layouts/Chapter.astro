@@ -1,6 +1,10 @@
 ---
-import i18next from 'i18next';
+import i18next, {t} from 'i18next';
+import { SEO } from 'astro-seo';
 import { HeadHrefLangs } from 'astro-i18next/components';
+import Navbar from '@/components/Navbar.astro';
+import Footer from '@/components/Footer.astro';
+import '@fontsource/bitter';
 
 export interface Props {
   frontmatter: {
@@ -9,38 +13,50 @@ export interface Props {
   };
 }
 
-import Navbar from '@/components/Navbar.astro';
-import Footer from '@/components/Footer.astro';
-const { frontmatter } = Astro.props;
-import '@fontsource/bitter';
+const {
+  frontmatter: { title, chapter },
+} = Astro.props;
+
+const image =
+  'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg';
+const imageAlt = 'Alice in the Room of the Duchess';
 ---
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
   <head>
-    <meta charset='UTF-8' />
+    <!-- Meta Tags -->
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/ico' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <SEO
+      charset='UTF-8'
+      title={title}
+      description={t('meta.descfull', {chapter: chapter, title: title})}
+      openGraph={{
+        basic: {
+          title: `${t('utility.chapter')} ${chapter}, ${title}`,
+          type: 'website',
+          image: image,
+        },
+        image: {
+          url: image,
+          alt: imageAlt,
+          type: 'jpg',
+          width: 576,
+          height: 796,
+        },
+      }}
+      twitter={{
+        title: 'Alice i18n',
+        description: t('meta.desc'),
+        image: image,
+        imageAlt: imageAlt,
+      }}
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.ico' }],
+      }}
+    />
     <HeadHrefLangs />
-    <!-- Open Graph Metadata https://ogp.me/ -->
-    <meta
-      property='og:title'
-      content={frontmatter.title}
-    />
-    <meta
-      property='og:description'
-      content={`Chapter ${frontmatter.chapter} of Alice Abridged`}
-    />
-    <meta
-      property='og:image'
-      content='https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg'
-    />
-    <meta property='og:image:alt' content='Alice in the Room of the Duchess' />
-    <meta property='og:image:type' content='image/jpeg' />
-    <meta property='og:image:width' content='576' />
-    <meta property='og:image:height' content='796' />
     <!-- Theme Scripts -->
     <script is:inline>
       // ☝️ This script prevent the FART effect.
@@ -67,7 +83,7 @@ import '@fontsource/bitter';
     >
       <slot />
     </article>
-    <Footer chapter={frontmatter.chapter} />
+    <Footer chapter={chapter} />
     <style is:global>
       h1,
       h2 {

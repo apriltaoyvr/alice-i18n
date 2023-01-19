@@ -4,6 +4,10 @@
     "desc": "Questa è una versione ridotta online di Alice nel Paese delle Meraviglie sotto la <0>licenza Gutenberg</0>",
     "start": "Inizia"
   },
+  "meta": {
+    "desc": "Un'Alice internazionalizzata",
+    "descfull": "Capitolo {{chapter}}, {{title}} di Alice nel Paese delle Meraviglie. \nOnline e da leggere gratuitamente. \nTutti i testi e le immagini tratte dal Progetto Gutenberg."
+  },
   "title": "Alice nel paese delle meraviglie",
   "utility": {
     "chapter": "Capitolo",
