@@ -1,7 +1,9 @@
 ---
-import i18next from 'i18next';
+import i18next, { t } from 'i18next';
 import { SEO } from 'astro-seo';
 import { HeadHrefLangs } from 'astro-i18next/components';
+import Navbar from '@/components/Navbar.astro';
+import '@fontsource/inter';
 
 export interface Props {
   title?: string;
@@ -11,8 +13,10 @@ export interface Props {
 }
 
 const { title, frontmatter } = Astro.props;
-import Navbar from '@/components/Navbar.astro';
-import '@fontsource/inter';
+
+const image =
+  'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg';
+const imageAlt = 'Alice in the Room of the Duchess';
 ---
 
 <!DOCTYPE html>
@@ -23,18 +27,17 @@ import '@fontsource/inter';
     <meta name='generator' content={Astro.generator} />
     <SEO
       charset='UTF-8'
-      title={frontmatter.title ? frontmatter.title : title}
-      description={`Alice internationalized. An online, free to read version of Alice in Wonderland in multiple languages. All texts and images taken from Project Gutenberg.`}
+      title={frontmatter?.title ? frontmatter.title : title}
+      description={t('meta.homedesc')}
       openGraph={{
         basic: {
-          title: frontmatter.title ? frontmatter.title : title,
+          title: 'Alice i18n',
           type: 'website',
-          image:
-            'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
+          image: image,
         },
         image: {
-          url: 'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
-          alt: 'Alice in the Room of the Duchess',
+          url: image,
+          alt: imageAlt,
           type: 'jpg',
           width: 576,
           height: 796,
@@ -42,10 +45,9 @@ import '@fontsource/inter';
       }}
       twitter={{
         title: 'Alice i18n',
-        description: 'An internationalized Alice',
-        image:
-          'https://alice-abridged.vercel.app/_image?w=800&h=1094&ar=0.7312614259597806&href=%2Fimage%2Fhero.jpg',
-        imageAlt: 'Alice in the Room of the Duchess',
+        description: t('meta.desc'),
+        image: image,
+        imageAlt: imageAlt,
       }}
       extend={{
         link: [{ rel: 'icon', href: '/favicon.ico' }],

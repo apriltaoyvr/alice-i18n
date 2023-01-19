@@ -5,8 +5,9 @@
     "start": "Inizia"
   },
   "meta": {
+    "chapterdesc": "Capitolo {{chapter}}, {{title}} di Alice nel Paese delle Meraviglie. \nOnline e da leggere gratuitamente. \nTutti i testi e le immagini tratte dal Progetto Gutenberg.",
     "desc": "Un'Alice internazionalizzata",
-    "descfull": "Capitolo {{chapter}}, {{title}} di Alice nel Paese delle Meraviglie. \nOnline e da leggere gratuitamente. \nTutti i testi e le immagini tratte dal Progetto Gutenberg."
+    "homedesc": "Alice internazionalizzata. \nUna versione online e gratuita di Alice nel Paese delle Meraviglie in più lingue. \nTutti i testi e le immagini tratte dal Progetto Gutenberg"
   },
   "title": "Alice nel paese delle meraviglie",
   "utility": {

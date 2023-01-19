@@ -11,6 +11,7 @@
   },
   "meta": {
    "desc": "An internationalized Alice",
-   "descfull": "Chapter {{chapter}}, {{title}} of Alice in Wonderland. Online and free to read. All texts and images taken from Project Gutenberg."
+   "chapterdesc": "Chapter {{chapter}}, {{title}} of Alice in Wonderland. Online and free to read. All texts and images taken from Project Gutenberg.",
+   "homedesc": "Alice internationalized. An online, free to read version of Alice in Wonderland in multiple languages. All texts and images taken from Project Gutenberg"
   }
 }

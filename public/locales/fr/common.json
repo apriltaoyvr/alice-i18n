@@ -5,8 +5,9 @@
     "start": "Recommencer depuis le début"
   },
   "meta": {
+    "chapterdesc": "Chapitre {{chapter}}, {{title}} d'Alice au pays des merveilles. \nLecture en ligne et gratuite. \nTous les textes et images proviennent du projet Gutenberg.",
     "desc": "Une Alice internationalisée",
-    "descfull": "Chapitre {{chapter}}, {{title}} d'Alice au pays des merveilles. \nLecture en ligne et gratuite. \nTous les textes et images proviennent du projet Gutenberg."
+    "homedesc": "Alice s'est internationalisée. \nUne version en ligne gratuite d'Alice au pays des merveilles en plusieurs langues. \nTous les textes et images sont extraits du Projet Gutenberg"
   },
   "title": "Aventures d'Alice au pays des merveilles",
   "utility": {
