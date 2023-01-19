@@ -1,0 +1,18 @@
+{
+  "home": {
+    "credit": "Kuvat ja teksti on otettu itse <0>Gutenberg-projektista</0>.",
+    "desc": "Tämä on lyhennetty online-versio Liisa ihmemaassa <0>Gutenberg-lisenssillä</0>.",
+    "start": "Aloita alusta"
+  },
+  "meta": {
+    "chapterdesc": "Luku {{chapter}}, {{title}} Liisa ihmemaassa. \nNetissä ja ilmaiseksi luettavissa. \nKaikki tekstit ja kuvat otettu Project Gutenbergistä.",
+    "desc": "Kansainvälistynyt Alice",
+    "descfull": "meta.descfull",
+    "homedesc": "Alice kansainvälistyi. \nLiisa Ihmemaassa online-versio, joka on luettavissa useilla kielillä. \nKaikki tekstit ja kuvat otettu Project Gutenbergistä"
+  },
+  "title": "Liisa ihmemaassa",
+  "utility": {
+    "chapter": "Luku",
+    "toc": "Sisällysluettelo"
+  }
+}
