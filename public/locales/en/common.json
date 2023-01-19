@@ -1,0 +1,11 @@
+{
+  "title": "Alice in Wonderland",
+  "home": {
+    "desc": "This is an online, abridged version of Alice in Wonderland under the <0>Gutenberg licence</0>",
+    "credit": "The images and text were taken from <0>Project Gutenberg</0> itself.",
+    "start": "Start from the beginning"
+  },
+  "utility": {
+    "toc": "Table of Contents"
+  }
+}

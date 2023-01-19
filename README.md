@@ -1,7 +1,9 @@
-# Alice Abridged
-An online, abridged version of Alice in Wonderland. The text and images are taken from [Project Gutenberg](https://onlinebooks.library.upenn.edu/webbin/gutbook/lookup?num=19033). 
+# Alice Internationalized
+An online, internationalized version of Alice in Wonderland.
 
-This is a simple practice project to test out Astro.
+The text and images are taken from [Project Gutenberg](https://www.gutenberg.org/).
+
+Because each translation is its own edition and formatted differently, there may be formatting errors or misalignment between translations. Feel free to make a PR of any translation or formatting errors you have noticed.
 
 Please note that the legality of Gutenberg depends on your country. If you are in a country where Project Gutenberg's library is not legal, continue at your own risk.
 
@@ -12,5 +14,5 @@ Please note that the legality of Gutenberg depends on your country. If you are i
 
 ## Created with
 - Astro
+- astro-i18n
 - TailwindCSS (DaisyUI)
-

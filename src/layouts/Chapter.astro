@@ -1,4 +1,7 @@
 ---
+import i18next, { t } from 'i18next';
+import { Trans, HeadHrefLangs } from 'astro-i18next/components';
+
 export interface Props {
   title?: string;
   frontmatter?: {
@@ -14,13 +17,14 @@ import '@fontsource/bitter';
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang={i18next.language}>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/ico' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
     <title>{frontmatter.title ? frontmatter.title : title}</title>
+    <HeadHrefLangs />
     <!-- Open Graph Metadata https://ogp.me/ -->
     <meta
       property='og:title'
@@ -65,23 +69,23 @@ import '@fontsource/bitter';
       <slot />
     </article>
     <Footer chapter={frontmatter.chapter} />
+    <style is:global>
+      h1,
+      h2 {
+        @apply text-center;
+      }
+
+      p {
+        @apply max-w-prose;
+      }
+
+      hr {
+        @apply h-px my-8 border-0 bg-neutral w-[65ch];
+      }
+
+      blockquote {
+        @apply border-l-4 border-neutral;
+      }
+    </style>
   </body>
-  <style is:global>
-    h1,
-    h2 {
-      @apply text-center;
-    }
-
-    p {
-      @apply max-w-prose;
-    }
-
-    hr {
-      @apply h-px my-8 border-0 bg-neutral w-[65ch];
-    }
-
-    blockquote {
-      @apply border-l-4 border-neutral;
-    }
-  </style>
 </html>

@@ -1,0 +1,11 @@
+{
+  "home": {
+    "credit": "Les images et le texte ont été tirés du <0>Projet Gutenberg</0> lui-même.",
+    "desc": "Il s'agit d'une version abrégée en ligne d'Alice au pays des merveilles sous la <0>licence Gutenberg</0>",
+    "start": "Recommencer depuis le début"
+  },
+  "title": "Aventures d'Alice au pays des merveilles",
+  "utility": {
+    "toc": "Table des matières"
+  }
+}
