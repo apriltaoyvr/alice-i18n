@@ -20,9 +20,9 @@ Please note that the legality of Gutenberg depends on your country. If you are i
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/95392008/213047956-2dc16489-8be1-4259-ad06-984c19c5d18d.png)
-![image](https://user-images.githubusercontent.com/95392008/213048100-69f3c315-7e15-427f-ab0c-141fe175f8fc.png)
-![image](https://user-images.githubusercontent.com/95392008/213048219-50b5ff14-68a9-461b-affd-17efe65e9465.png)
+![image](https://user-images.githubusercontent.com/95392008/213563095-f281b60d-df77-4b6f-aa05-edc7ec5d36d4.png)
+![image](https://user-images.githubusercontent.com/95392008/213562976-f1957082-139d-4188-a1cf-b74caf39ead9.png)
+![image](https://user-images.githubusercontent.com/95392008/213563326-089d8af3-554b-4abf-9112-f0f24192a3c8.png)
 
 ## Created with
 
