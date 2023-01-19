@@ -6,6 +6,7 @@
     "start": "Start from the beginning"
   },
   "utility": {
+    "chapter": "Chapter",
     "toc": "Table of Contents"
   }
 }

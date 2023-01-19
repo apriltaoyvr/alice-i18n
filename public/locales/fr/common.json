@@ -6,6 +6,7 @@
   },
   "title": "Aventures d'Alice au pays des merveilles",
   "utility": {
+    "chapter": "Chapitre",
     "toc": "Table des matières"
   }
 }

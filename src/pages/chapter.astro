@@ -1,19 +1,14 @@
 ---
 import { changeLanguage, t } from "i18next";
-interface Post {
-    url: string;
-    frontmatter: {
-        title: string;
-        chapter: number;
-    };
-}
-const data: Post[] = await Astro.glob("./*.mdx");
-const posts = data.sort((a, b) => {
-    return a.frontmatter.chapter - b.frontmatter.chapter;
-});
+import { localizePath } from "astro-i18next";
 import Layout from "@/layouts/Layout.astro";
 
-changeLanguage("it");
+changeLanguage("en");
+
+const chapters = await Astro.glob("./chapter/*.mdx");
+chapters.sort((a, b) => {
+    return a.frontmatter.chapter - b.frontmatter.chapter;
+});
 ---
 
 <Layout title={t('utility.toc')}>
@@ -24,10 +19,10 @@ changeLanguage("it");
       <h1 class='pt-2'>{t('utility.toc')}</h1>
       <ol>
         {
-          posts.map((post) => (
+          chapters.map((chapter) => (
             <li>
-              <a href={post.url} class='link-hover'>
-                {post.frontmatter.title}
+              <a href={chapter.url} class='link-hover'>
+                {chapter.frontmatter.title}
               </a>
             </li>
           ))

@@ -1,6 +1,7 @@
 ---
 import { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 
@@ -33,10 +34,10 @@ changeLanguage("fr");
             </Trans>
           </p>
         </article>
-        <a href='/chapter/1' class='btn btn-primary mr-2'>
+        <a href={localizePath("/chapter") + '/1'} class='btn btn-primary mr-2'>
           {t('home.start')}
         </a>
-        <a href='/chapter' class='btn btn-ghost'>{t('utility.toc')}</a>
+        <a href={localizePath("/chapter")} class='btn btn-ghost'>{t('utility.toc')}</a>
       </article>
       <Image
         src='/image/hero.jpg'

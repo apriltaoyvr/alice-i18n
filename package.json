@@ -19,7 +19,6 @@
     "theme-change": "^2.3.0"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^1.0.0",
     "@fontsource/bitter": "^4.5.10",
     "@fontsource/inter": "^4.5.14",
     "@tailwindcss/typography": "^0.5.9",

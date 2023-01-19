@@ -6,6 +6,7 @@
   },
   "title": "Alice nel paese delle meraviglie",
   "utility": {
+    "chapter": "Capitolo",
     "toc": "Sommario"
   }
 }
