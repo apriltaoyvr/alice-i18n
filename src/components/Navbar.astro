@@ -1,10 +1,11 @@
 ---
 import Modal from './Modal.astro';
-import LanguageSelector from "./LanguageSelector.astro";
+import LanguageSelector from './LanguageSelector.astro';
+
 ---
 
 <nav
-  class='navbar bg-base-100/90 border-b-[1px] border-b-base-content/25 hover:border-b-base-content sticky top-0 z-10 font-sans'
+  class='navbar bg-base-100/90 border-b-[1px] border-b-base-content/25 hover:border-b-base-content sticky top-0 z-10 font-sans' id='navbar'
 >
   <div class='flex-1'>
     <a href='/' class='btn btn-ghost normal-case text-xl'>Alice</a>
@@ -14,3 +15,9 @@ import LanguageSelector from "./LanguageSelector.astro";
     <LanguageSelector showFlag={true} />
   </div>
 </nav>
+
+<style>
+  #navbar {
+    transition: top 0.3s;
+  }
+</style>

@@ -1,5 +1,5 @@
 ---
-import i18next, {t} from 'i18next';
+import i18next, { t } from 'i18next';
 import { SEO } from 'astro-seo';
 import { HeadHrefLangs } from 'astro-i18next/components';
 import Navbar from '@/components/Navbar.astro';
@@ -31,7 +31,7 @@ const imageAlt = 'Alice in the Room of the Duchess';
     <SEO
       charset='UTF-8'
       title={title}
-      description={t('meta.chapterdesc', {chapter: chapter, title: title})}
+      description={t('meta.chapterdesc', { chapter: chapter, title: title })}
       openGraph={{
         basic: {
           title: `${t('utility.chapter')} ${chapter}, ${title}`,
@@ -74,6 +74,19 @@ const imageAlt = 'Alice in the Room of the Duchess';
       import { themeChange } from 'theme-change';
       themeChange();
       // 👆 you could import the CDN directly instead of these two lines
+    </script>
+    <!-- Scrollbar -->
+    <script is:inline>
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = () => {
+        const currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById('navbar').style.top = '0';
+        } else {
+          document.getElementById('navbar').style.top = '-5rem';
+        }
+        prevScrollpos = currentScrollPos;
+      };
     </script>
   </head>
   <body>
