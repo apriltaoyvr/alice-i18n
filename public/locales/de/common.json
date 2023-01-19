@@ -1,0 +1,17 @@
+{
+  "home": {
+    "credit": "Die Bilder und Texte wurden vom <0>Projekt Gutenberg</0> selbst übernommen.",
+    "desc": "Dies ist eine gekürzte Online-Version von Alice im Wunderland unter der <0>Gutenberg-Lizenz</0>",
+    "start": "Von Anfang an starten"
+  },
+  "meta": {
+    "chapterdesc": "Kapitel {{chapter}}, {{title}} von Alice im Wunderland. \nOnline und frei lesbar. \nAlle Texte und Bilder stammen aus dem Projekt Gutenberg.",
+    "desc": "Eine internationalisierte Alice",
+    "homedesc": "Alice internationalisiert. \nEine kostenlose Online-Version von Alice im Wunderland in mehreren Sprachen. \nAlle Texte und Bilder stammen aus dem Projekt Gutenberg"
+  },
+  "title": "Alice im Wunderland",
+  "utility": {
+    "chapter": "Kapitel",
+    "toc": "Inhaltsverzeichnis"
+  }
+}
