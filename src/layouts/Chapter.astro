@@ -75,21 +75,8 @@ const imageAlt = 'Alice in the Room of the Duchess';
       themeChange();
       // 👆 you could import the CDN directly instead of these two lines
     </script>
-    <!-- Scrollbar -->
-    <script is:inline>
-      window.onscroll = () => {
-        const winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop;
-        const height =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('progress-bar').value = scrolled;
-      };
-    </script>
   </head>
   <body>
-    <progress id='progress-bar' class='fixed z-20 progress progress-primary rounded-none opacity-75 h-1' value='0' max='100' />
     <Navbar />
     <article
       class='flex flex-col sm:items-center p-4 min-w-full prose-sm md:prose-base lg:prose-xl'
@@ -98,6 +85,23 @@ const imageAlt = 'Alice in the Room of the Duchess';
     </article>
     <Footer chapter={chapter} />
     <style is:global>
+      /* Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      *::-webkit-scrollbar-track {
+        @apply bg-neutral rounded-sm;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        @apply bg-accent rounded-sm;
+      }
+
+      *::-webkit-scrollbar-thumb:hover {
+        @apply bg-accent-focus;
+      }
+
       h1,
       h2 {
         @apply text-center;
