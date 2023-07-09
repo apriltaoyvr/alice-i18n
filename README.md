@@ -20,7 +20,7 @@ Please note that the legality of Gutenberg depends on your country. If you are i
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/95392008/213563095-f281b60d-df77-4b6f-aa05-edc7ec5d36d4.png)
+![image](https://github.com/apriltaoyvr/alice-i18n/assets/95392008/ae8d1513-3d14-46fd-a59f-6a68fc1279fc)
 ![image](https://user-images.githubusercontent.com/95392008/213562976-f1957082-139d-4188-a1cf-b74caf39ead9.png)
 ![image](https://user-images.githubusercontent.com/95392008/213563326-089d8af3-554b-4abf-9112-f0f24192a3c8.png)
 
